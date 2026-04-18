@@ -29,5 +29,37 @@ class StudentSim
     Scanner sc = new Scanner(System.in);
     System.out.println("Enter number of students: ");
     int n = sc.nextInt();
+    if(n>=3)
+    {
+      Student s = new Student[n];
+      for(int i =0;i<n;i++)
+      {
+      	System.out.println("Enter details for student " + (i + 1));                
+        System.out.print("ID: ");                
+        int pId = sc.nextInt();                
+        sc.nextLine(); // Consume newline                
+        System.out.print("Name: ");                
+        String pName = sc.nextLine();                
+        System.out.print("Phy, Chem, Mat marks: ");                
+        double phy = sc.nextDouble();               
+        double chem = sc.nextDouble();                
+        double mat = sc.nextDouble();                
+        s[i] = new Student(pId, pName, phy, chem, mat);  
+      }
+        int lar = 0;                
+        for (int i = 1; i < n; i++)
+        {                
+          if (s[i].avg > s[lar].avg)
+          {                
+            lar = i;                
+          }                
+        }                
+      System.out.println("Id: " + pId + "\tName: " + pName + "\nPhysics\tChemistry\tMathematics" + s[lar].phy + "\t" + s[lar].chem + "\t" + s[lar].mat);
+      System.out.println("Total: " + s[lar].total  +  "\nAverage: " + s[lar].avg);
+    }
+    else
+    {
+      System.out.println("Error!!!");
+    }
   }
 }
