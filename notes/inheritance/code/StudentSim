@@ -7,7 +7,7 @@ class Person
 class Student extends Person
 {
   double phy, chem, mat, avg,total;
-  Student(pId, pName, double phy, double chem, double mat)
+  Student(int pId, String pName, double phy, double chem, double mat)
   {
     this.pId = pId;
     this.pName = pName;
