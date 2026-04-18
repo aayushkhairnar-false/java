@@ -1,0 +1,33 @@
+import java.util.Scanner;
+class Person
+{
+  int pId;
+  String pName;
+}
+class Student extends Person
+{
+  double phy, chem, mat, avg,total;
+  Student(pId, pName, double phy, double chem, double mat)
+  {
+    this.pId = pId;
+    this.pName = pName;
+    this.phy = phy;
+    this.chem = chem;
+    this.mat = mat;
+    compute();
+  }
+  void compute()
+  {
+    this.total = phy+chem+mat;
+    this.avg = (phy+chem+mat)/3.0;
+  }
+}
+class StudentSim
+{
+  public static void main(String args[])
+  {
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter number of students: ");
+    int n = sc.nextInt();
+  }
+}
