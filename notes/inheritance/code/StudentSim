@@ -54,7 +54,7 @@ class StudentSim
             lar = i;                
           }                
         }                
-      System.out.println("Id: " + pId + "\tName: " + pName + "\nPhysics\tChemistry\tMathematics" + s[lar].phy + "\t" + s[lar].chem + "\t" + s[lar].mat);
+      System.out.println("Id: " + s[lar].pId + "\tName: " + s[lar].pName + "\nPhysics\tChemistry\tMathematics" + s[lar].phy + "\t" + s[lar].chem + "\t" + s[lar].mat);
       System.out.println("Total: " + s[lar].total  +  "\nAverage: " + s[lar].avg);
     }
     else
